@@ -1,7 +1,7 @@
 {{-- #navbar --}}
 <nav class="container navbar navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="{{ url('/') }}">
       <img src="{{ asset('images/dc-logo.png') }}" alt="DC Logo" class="w-75">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
