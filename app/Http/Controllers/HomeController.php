@@ -8,8 +8,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $links = config('headermenu');
-
-        return view('home', compact('links'));
+        return view('home');
     }
 }

@@ -10,11 +10,37 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent" style="display: grid !important;">
       <ul class="navbar-nav mb-2 mb-lg-0">
-        @foreach ($links as $link)
-          <li class="nav-item mx-2">
-            <a class="nav-link @if (Route::is(strtolower($link['text']))) current @endif" href="#">{{ $link['text'] }}</a>
-          </li>
-        @endforeach
+        <li class="nav-item mx-2">
+          <a class="nav-link @if (Route::is('home')) current @endif" href="{{ route('home') }}">Home</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link @if (Route::is('characters')) current @endif" href="#">Characters</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link @if (Route::is('comics.index')) current @endif"
+            href="{{ route('comics.index') }}">Comics</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link @if (Route::is('movies')) current @endif" href="#">Movies</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link @if (Route::is('tv')) current @endif" href="#">TV</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link @if (Route::is('games')) current @endif" href="#">Games</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link @if (Route::is('collectibles')) current @endif" href="#">Collectibles</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link @if (Route::is('videos')) current @endif" href="#">Videos</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link @if (Route::is('fans')) current @endif" href="#">Fans</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link @if (Route::is('news')) current @endif" href="#">News</a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
