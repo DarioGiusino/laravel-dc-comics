@@ -37,3 +37,6 @@
     </form>
   </div>
 </nav>
+
+{{-- #jumbotron --}}
+<section id="jumbo"></section>
