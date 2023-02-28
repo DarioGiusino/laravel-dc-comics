@@ -42,7 +42,7 @@
         <div class="col-3 advertisement">
           {{-- ! immagine non si vede?? --}}
           <figure>
-            <img src="{{ asset('images/adv.jpg') }}" alt="adv">
+            <img src="{{ asset('images/dc-logo.png') }}" alt="adv">
           </figure>
         </div>
       </div>
