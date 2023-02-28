@@ -3,7 +3,14 @@
 @section('title', 'Comics')
 
 @section('content')
-  <section id="home" style="height: 500px">
-    <h1>Comics list</h1>
-  </section>
+  <main id="comics">
+    <div class="container">
+      <h3>current series</h3>
+      <div class="row row-cols-6 my-5">
+        @foreach ($comics as $comic)
+          @include('includes.comicCard')
+        @endforeach
+      </div>
+    </div>
+  </main>
 @endsection

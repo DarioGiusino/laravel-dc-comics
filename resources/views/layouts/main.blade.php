@@ -30,9 +30,7 @@
   </header>
 
   {{-- main --}}
-  <main class="container">
-    @yield('content')
-  </main>
+  @yield('content')
 
   {{-- footer --}}
   <footer>
