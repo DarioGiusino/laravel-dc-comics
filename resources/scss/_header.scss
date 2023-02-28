@@ -1,0 +1,37 @@
+header {
+    ul.navbar-nav {
+        justify-self: center;
+
+        li {
+            a {
+                &.current {
+                    color: $blue;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    form {
+        border-bottom: 2px solid $blue;
+
+        input {
+            border: none;
+
+            &:focus-visible {
+                outline: none;
+            }
+
+            &::placeholder {
+                text-align: end;
+                color: grey;
+            }
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            color: $blue;
+        }
+    }
+}
