@@ -17,7 +17,7 @@
           <a class="nav-link @if (Route::is('characters')) current @endif" href="#">Characters</a>
         </li>
         <li class="nav-item mx-2">
-          <a class="nav-link @if (Route::is('comics.index')) current @endif"
+          <a class="nav-link @if (request()->routeis('comics*')) current @endif"
             href="{{ route('comics.index') }}">Comics</a>
         </li>
         <li class="nav-item mx-2">
