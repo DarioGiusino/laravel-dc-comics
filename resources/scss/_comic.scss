@@ -1,0 +1,86 @@
+#comic {
+    .blue-stripe {
+        height: 80px;
+        background-color: $blue;
+    }
+
+    .comic-cover {
+        width: 225px;
+        position: absolute;
+        top: -350px;
+        left: 0;
+        border: 0.5px solid #fff;
+
+        p {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $blue;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 3px 5px;
+        }
+    }
+
+    h2 {
+        text-transform: uppercase;
+        color: #003f5e;
+    }
+
+    .availability {
+        border-bottom: 1px solid #609463;
+        background-color: #55ba59;
+        color: #fff;
+
+        .col-9 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-right: 1px solid #609463;
+
+            p {
+                margin-bottom: 0;
+                color: #9ff592;
+
+                strong {
+                    color: #fff;
+                }
+            }
+        }
+
+        .col-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            button {
+                color: #fff;
+            }
+        }
+    }
+
+    .comic-desc {
+        line-height: 35px;
+    }
+
+    .detail {
+        background-color: #f6f6f6;
+        padding: 10px;
+        border-top: 0.5px solid #dedede;
+        ul {
+            padding: 0;
+            li {
+                border-top: 0.5px solid #dedede;
+                border-bottom: 0.5px solid #dedede;
+                padding: 10px 0;
+                h6 {
+                    flex-basis: 30%;
+                }
+
+                p {
+                    flex-basis: 70%;
+                }
+            }
+        }
+    }
+}
