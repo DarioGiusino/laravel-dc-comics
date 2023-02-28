@@ -12,5 +12,9 @@
         @endforeach
       </div>
     </div>
+    <div class="more-btn">
+      <button>load more</button>
+    </div>
+    @include('includes.merch')
   </main>
 @endsection

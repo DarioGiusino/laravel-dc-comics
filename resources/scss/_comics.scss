@@ -41,4 +41,19 @@
             margin-bottom: 0;
         }
     }
+    .more-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            color: #fff;
+            background-color: $blue;
+            padding: 10px 15px;
+            margin-bottom: 20px;
+        }
+    }
 }
