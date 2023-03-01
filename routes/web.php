@@ -21,5 +21,11 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 // * comics routes
 // Route::resource('comics', ComicController::class);
 
+// route for comics list
 Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
+
+// route for create new comic form
+Route::get('/comics/create', [ComicController::class, 'create'])->name('comics.create');
+
+// route for comic detail
 Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.show');
