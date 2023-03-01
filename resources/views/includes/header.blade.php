@@ -57,8 +57,8 @@
         </li>
       </ul>
     </div>
-    <form class="d-flex" role="search">
-      <input type="search" placeholder="Search">
+    <form class="d-flex" role="search" method="get" action="{{ route('comics.index') }}">
+      <input type="search" placeholder="Search" name="search" value="{{ $search ?? '' }}">
       <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
     </form>
   </div>

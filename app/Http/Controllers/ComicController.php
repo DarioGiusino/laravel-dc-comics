@@ -4,17 +4,24 @@ namespace App\Http\Controllers;
 
 use App\Models\Comic;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ComicController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $comics = Comic::all();
+        $search = $request->query('search');
 
-        return view('comics.index', compact('comics'));
+        $query = Comic::orderBy('id');
+
+        if ($search) $query->where('title', 'LIKE', "%$search%");
+
+        $comics = $query->get();
+
+        return view('comics.index', compact('comics', 'search'));
     }
 
     /**

@@ -6,7 +6,7 @@
   <main id="comics">
     <div class="container">
       <h3>current series</h3>
-      <div class="row row-cols-6 my-5">
+      <div class="row row-cols-6 my-5 w-100">
         @foreach ($comics as $comic)
           @include('includes.comicCard')
         @endforeach
