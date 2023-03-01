@@ -30,6 +30,14 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+
+        // ! validation (just a try)
+        $request->validate([
+            //array key(input name) => what to validate
+            "title" => 'required|string'
+        ]);
+
+
         // store all the form values in variable
         $data = $request->all();
 
