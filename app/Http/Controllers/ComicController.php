@@ -60,7 +60,7 @@ class ComicController extends Controller
         // save/add on db
         $comic->save();
 
-        // redirect to comics list index
+        // redirect to new comic created
         return to_route('comics.show', $comic->id);
     }
 
