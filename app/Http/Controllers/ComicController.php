@@ -51,8 +51,6 @@ class ComicController extends Controller
         //set the date as the database expect
         $data['sale_date'] = date("Y-m-d", strtotime($data['sale_date']));
 
-        dd($data);
-
         // generate a new comic
         $comic = new Comic();
 
