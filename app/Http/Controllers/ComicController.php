@@ -44,6 +44,18 @@ class ComicController extends Controller
         $data['sale_date'] = date("Y-m-d", strtotime($data['sale_date']));
 
         dd($data);
+
+        // generate a new comic
+        $comic = new Comic();
+
+        // fill the new comic with the form values
+        $comic->fill($data);
+
+        // save/add on db
+        $comic->save();
+
+        // redirect to comics list index
+        return to_route('comics.index');
     }
 
     /**
