@@ -13,7 +13,8 @@
       </div>
     </div>
     <div class="more-btn">
-      <button>load more</button>
+      <button class="me-3">load more</button>
+      <a href="#" class="text-decoration-none">add</a>
     </div>
     @include('includes.merch')
   </main>
