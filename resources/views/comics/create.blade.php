@@ -9,8 +9,8 @@
 
     {{-- form --}}
     <div class="container">
-      {{-- TODO action="{{ route('comics.store') }}"  --}}
-      <form class="w-100" method="post">
+      <form class="w-100" action="{{ route('comics.store') }}" method="post">
+        @csrf
         <div class="row">
           {{-- form title --}}
           <div class="col-6">

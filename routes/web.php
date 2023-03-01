@@ -29,3 +29,6 @@ Route::get('/comics/create', [ComicController::class, 'create'])->name('comics.c
 
 // route for comic detail
 Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.show');
+
+// route to store a new comic in db
+Route::post('/comics', [ComicController::class, 'store'])->name('comics.store');
