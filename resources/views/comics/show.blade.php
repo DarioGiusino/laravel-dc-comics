@@ -39,11 +39,11 @@
 
           <p class="comic-desc">{{ $comic->description }}</p>
         </div>
-        <div class="col-3 advertisement">
-          {{-- ! immagine non si vede?? --}}
+        <div class="col-3 advertisement d-flex flex-column justify-content-center">
           <figure>
             <img src="{{ asset('images/dc-logo.png') }}" alt="adv">
           </figure>
+          <a href="{{ route('comics.index') }}" class="btn btn-small btn-secondary">Go back</a>
         </div>
       </div>
     </section>
