@@ -52,7 +52,7 @@
           <div class="col-2">
             <div class="mb-3">
               <label for="type" class="form-label">Type:</label>
-              <select class="form-select" id="type">
+              <select class="form-select" id="type" name="type">
                 <option value="" selected>Select one...</option>
                 <option value="graphic novel">Graphic Novel</option>
                 <option value="comic book">Comic Book</option>
