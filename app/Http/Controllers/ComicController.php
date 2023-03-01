@@ -34,7 +34,15 @@ class ComicController extends Controller
         // ! validation (just a try)
         $request->validate([
             //array key(input name) => what to validate
-            "title" => 'required|string'
+            "title" => 'required|string',
+            'description' => 'nullable|string',
+            'thumb' => 'nullable|URL',
+            'price' => 'required|decimal:2',
+            'series' => 'nullable|string',
+            'sale_date' => 'required|date',
+            'type' => 'required|string',
+            'artists' => 'required|string',
+            'writers' => 'required|string',
         ]);
 
 
