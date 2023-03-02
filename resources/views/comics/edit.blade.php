@@ -20,7 +20,7 @@
 
     {{-- form --}}
     <div class="container">
-      <form class="w-100" action="{{ route('comics.update') }}" method="post">
+      <form class="w-100" action="{{ route('comics.update', $comic->id) }}" method="post">
         {{-- method directive --}}
         @method('put')
 
