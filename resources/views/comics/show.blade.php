@@ -56,15 +56,16 @@
             {{-- edit button --}}
             <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-small btn-warning text-white me-3">Edit</a>
             {{-- delete button --}}
-            <form action="{{ route('comics.destroy', $comic->id) }}" method='post'>
+            <form action="{{ route('comics.destroy', $comic->id) }}" method='post' class="delete-form"
+              data-form="{{ $comic->title }}">
               {{-- method --}}
               @method('delete')
               {{-- cross-site request forgery --}}
               @csrf
-              <button href="#" class="btn btn-small btn-danger me-3">Delete</button>
+              <button type="submit" class="btn btn-small btn-danger me-3">Delete</button>
             </form>
             {{-- go back button --}}
-            <a href="{{ route('comics.index') }}" class="btn btn-small btn-secondary">Go back</a>
+            <a href="{{ route('comics.index') }}" class="btn btn-small btn-secondary" id="ciccio">Go back</a>
           </div>
         </div>
       </div>
@@ -112,4 +113,28 @@
       </div>
     </section>
   </main>
+@endsection
+
+@section('scripts')
+  <script>
+    // get element from dom
+    const deleteForm = document.querySelector(".delete-form");
+    // const deleteForm = document.querySelectorAll(".delete-form");
+
+    // event listener on submit
+    deleteForm.addEventListener('submit', (e) => {
+
+      //stop event submit
+      e.preventDefault();
+
+      // get comic title from custom attribute
+      const title = deleteForm.getAttribute('data-form');
+
+      // ask delete confirmation
+      const confirm = window.confirm(`Vuoi cancellare "${title}"?`);
+
+      // if yes, submit
+      if (confirm) deleteForm.submit();
+    });
+  </script>
 @endsection
