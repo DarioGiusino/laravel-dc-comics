@@ -54,7 +54,7 @@
           {{-- buttons --}}
           <div class="d-flex align-items-center">
             {{-- edit button --}}
-            <a href="#" class="btn btn-small btn-warning text-white me-3">Edit</a>
+            <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-small btn-warning text-white me-3">Edit</a>
             {{-- go back button --}}
             <a href="{{ route('comics.index') }}" class="btn btn-small btn-secondary">Go back</a>
           </div>
