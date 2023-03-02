@@ -56,7 +56,9 @@
             {{-- edit button --}}
             <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-small btn-warning text-white me-3">Edit</a>
             {{-- delete button --}}
-            <a href="#" class="btn btn-small btn-danger me-3">Delete</a>
+            <form action="">
+              <button href="#" class="btn btn-small btn-danger me-3">Delete</button>
+            </form>
             {{-- go back button --}}
             <a href="{{ route('comics.index') }}" class="btn btn-small btn-secondary">Go back</a>
           </div>
