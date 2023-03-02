@@ -3,6 +3,7 @@
 @section('title', 'Comics')
 
 @section('content')
+  {{-- comics --}}
   <main id="comics">
     <div class="container">
       <h3>current series</h3>
@@ -12,10 +13,14 @@
         @endforeach
       </div>
     </div>
+
+    {{-- buttons --}}
     <div class="more-btn">
       <button class="me-3">load more</button>
       <a href="{{ route('comics.create') }}" class="text-decoration-none">add</a>
     </div>
+
+    {{-- merch (blue) row --}}
     @include('includes.merch')
   </main>
 @endsection
