@@ -20,7 +20,9 @@
 
     {{-- form --}}
     <div class="container">
-      <form class="w-100" action="{{ route('comics.store') }}" method="post">
+      <form class="w-100" action="{{ route('comics.update') }}" method="post">
+        {{-- method directive --}}
+        @method('put')
 
         {{-- ! cross-site request forgery --}}
         @csrf
