@@ -38,3 +38,6 @@ Route::get('/comics/{comic}/edit', [ComicController::class, 'edit'])->name('comi
 
 // route to save the edit in db
 Route::put('comics/{comic}', [ComicController::class, 'update'])->name('comics.update');
+
+// route to destroy a resource from the db
+Route::delete('/comics/{comic}', [ComicController::class, 'destroy'])->name('comics.destroy');
