@@ -56,7 +56,11 @@
             {{-- edit button --}}
             <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-small btn-warning text-white me-3">Edit</a>
             {{-- delete button --}}
-            <form action="">
+            <form action="#" method='post'>
+              {{-- method --}}
+              @method('delete')
+              {{-- cross-site request forgery --}}
+              @csrf
               <button href="#" class="btn btn-small btn-danger me-3">Delete</button>
             </form>
             {{-- go back button --}}
