@@ -38,7 +38,7 @@ class ComicController extends Controller
     public function store(Request $request)
     {
 
-        // ! validation (just a try)
+        // ! validation
         $request->validate([
             //array key(input name) => what to validate
             "title" => 'required|string',
@@ -100,11 +100,26 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        // ! validation
+        $request->validate([
+            //array key(input name) => what to validate
+            //? if unique 'title' => ['required', 'string', Rule::unique('comics')->ignore($comic->id)]
+            "title" => 'required|string',
+            'description' => 'nullable|string',
+            'thumb' => 'nullable|URL',
+            'price' => 'required|decimal:2',
+            'series' => 'nullable|string',
+            'sale_date' => 'required|date',
+            'type' => 'required|string',
+            'artists' => 'required|string',
+            'writers' => 'required|string',
+        ]);
+
         $data = $request->all();
 
         $comic->fill($data);
-
         $comic->save();
+        //? fill+save = $comic->update($data)
 
         return to_route('comics.show', $comic->id);
     }
