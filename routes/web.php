@@ -35,3 +35,6 @@ Route::post('/comics', [ComicController::class, 'store'])->name('comics.store');
 
 // route to get the form for edit the resource
 Route::get('/comics/{comic}/edit', [ComicController::class, 'edit'])->name('comics.edit');
+
+// route to save the edit in db
+Route::put('comics/{comic}', [ComicController::class, 'update'])->name('comics.update');
