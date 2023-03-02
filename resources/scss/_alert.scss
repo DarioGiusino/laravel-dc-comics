@@ -1,0 +1,11 @@
+#delete-alert {
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    transition: opacity 1s ease-out, visibility 1.1s linear;
+
+    &.dissolving {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

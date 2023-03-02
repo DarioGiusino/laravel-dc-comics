@@ -22,5 +22,29 @@
 
     {{-- merch (blue) row --}}
     @include('includes.merch')
+
+    {{-- delete toast --}}
+    @if (session('message'))
+      <div class="alert alert-danger d-flex justify-content-between align-items-center" role="alert" id="delete-alert">
+        <p class="mb-0"> deleted</p>
+        <button type="button" class="btn-close ms-3" id="alert-btn"></button>
+      </div>
+    @endif
   </main>
+@endsection
+
+@section('scripts')
+  <script>
+    const closeBtn = document.getElementById('alert-btn');
+    const toast = document.getElementById('delete-alert');
+
+    closeBtn.addEventListener('click', () => {
+      toast.classList.add('dissolving');
+
+    })
+
+    setInterval(() => {
+      toast.classList.add('dissolving');
+    }, 3000);
+  </script>
 @endsection

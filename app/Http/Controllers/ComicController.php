@@ -133,6 +133,6 @@ class ComicController extends Controller
         //? Comic::destroy($comic)
         $comic->delete();
 
-        return to_route('comics.index');
+        return to_route('comics.index')->with('message', "$comic->title deleted succesfully.");
     }
 }
