@@ -32,3 +32,6 @@ Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.sh
 
 // route to store a new comic in db
 Route::post('/comics', [ComicController::class, 'store'])->name('comics.store');
+
+// route to get the form for edit the resource
+Route::get('/comics/{comic}/edit', [ComicController::class, 'edit'])->name('comics.edit');
