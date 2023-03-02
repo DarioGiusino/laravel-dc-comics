@@ -103,7 +103,7 @@
             {{-- submit --}}
             <button type="submit" class="btn btn-primary">Save</button>
             {{-- reset --}}
-            <button type="reset" class="btn btn-danger mx-3">Reset</button>
+            <button type="reset" class="btn btn-warning mx-3"><i class="fa-solid fa-arrows-spin"></i></button>
             {{-- go back --}}
             <a href="{{ route('comics.index') }}" class="btn btn-secondary">Go back</a>
           </div>
