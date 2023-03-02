@@ -26,7 +26,7 @@
     {{-- delete toast --}}
     @if (session('message'))
       <div class="alert alert-danger d-flex justify-content-between align-items-center" role="alert" id="delete-alert">
-        <p class="mb-0"> deleted</p>
+        <p class="mb-0">{{ session('message') }}</p>
         <button type="button" class="btn-close ms-3" id="alert-btn"></button>
       </div>
     @endif
