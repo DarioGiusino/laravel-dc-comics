@@ -122,7 +122,7 @@ class ComicController extends Controller
         $comic->save();
         //? fill+save = $comic->update($data)
 
-        return to_route('comics.show', $comic->id);
+        return to_route('comics.show', $comic->id)->with('message', "$comic->title updated succesfully.")->with('type', 'warning');
     }
 
     /**
