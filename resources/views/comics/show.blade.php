@@ -112,6 +112,9 @@
         </div>
       </div>
     </section>
+
+    {{-- toast --}}
+    @include('includes.toast')
   </main>
 @endsection
 
@@ -137,4 +140,6 @@
       if (confirm) deleteForm.submit();
     });
   </script>
+  {{-- toast js --}}
+  @vite('resources/js/toast.js')
 @endsection
